@@ -1,32 +1,20 @@
-# Ghostty Themes
+# Theme Depot
 
-A collection of custom color themes for [Ghostty](https://ghostty.org).
+A collection of custom color themes for various applications.
+
+## Themes
+
+- **Future Earth** — an earthy, warm palette with light and dark variants
 
 ## Installation
 
 1. Clone this repository:
 
    ```sh
-   git clone https://github.com/faizonzaman/ghostty-themes.git
+   git clone https://github.com/faizonzaman/theme-depot.git
    ```
 
-2. Copy a theme file into your Ghostty config directory:
-
-   ```sh
-   cp themes/<theme-name> ~/.config/ghostty/themes/
-   ```
-
-3. Reference the theme in your Ghostty config (`~/.config/ghostty/config`):
-
-   ```
-   theme = <theme-name>
-   ```
-
-4. Restart Ghostty or reload the config.
-
-## Adding a Theme
-
-Each theme is a plain text file in the `themes/` directory. See the [Ghostty documentation](https://ghostty.org/docs/config) for available color options.
+2. Follow the setup guide for your app: [docs/load-themes-in/](docs/load-themes-in/)
 
 ## License
 
