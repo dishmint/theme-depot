@@ -13,6 +13,17 @@ Theme Depot is a collection of custom color themes for terminal emulators and ot
 
 ## Theme File Formats
 
+### Xcode
+
+XML plist files (`.xccolortheme`) following Apple's `DVTFontAndColorTheme` schema. Each theme defines:
+- Syntax colors (`DVTSourceTextSyntaxColors`) — RGBA values in `"R G B A"` format (0–1 range)
+- Syntax fonts (`DVTSourceTextSyntaxFonts`) — `"FontName - Size"` format
+- Editor chrome — background, selection, cursor, line highlight, scrollbar markers, invisibles
+- Console colors — debugger input/output, prompt, background, cursor
+- Markup colors — headings, links, code, emphasis
+
+Light and dark variants follow the palette's design principles: dark mode uses color distinctions, light mode uses font weight distinctions (bold for functions, semibold for types) with minimal color.
+
 ### Ghostty
 
 Plain-text config files (no extension) using `key = value` syntax. Each theme defines:
