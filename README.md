@@ -11,7 +11,7 @@ A collection of custom color themes for various applications.
 1. Clone this repository:
 
    ```sh
-   git clone https://github.com/faizonzaman/theme-depot.git
+   git clone https://github.com/dishmint/theme-depot.git
    ```
 
 2. Follow the setup guide for your app: [docs/load-themes-in/](docs/load-themes-in/)
