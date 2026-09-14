@@ -13,10 +13,20 @@ Xcode 27 replaces the **Themes** pane with **Settings** > **Appearance**, which 
 
 ### Install
 
+Xcode 27 reads workspace themes from the same directory as classic themes:
+
+```sh
+mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+cp xcode/future-earth/*.xcworkspacecolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+```
+
+Or import through the UI: **Settings** > **Appearance** > **Theme** > **Choose…** > **Import…** and select each `.xcworkspacecolortheme` file.
+
+### Activate
+
 1. Open Xcode 27
 2. Go to **Settings** > **Appearance** (or press <kbd>Cmd</kbd> + <kbd>,</kbd>)
-3. In the **Theme** section click **Choose…**, then **Import…**
-4. Select `xcode/future-earth/future-earth-dark.xcworkspacecolortheme`, then repeat for `future-earth-light.xcworkspacecolortheme`
+3. In the **Theme** section click **Choose…** and select **future-earth-dark** or **future-earth-light**
 
 Xcode picks the dark or light recipe to match the **Appearance** setting at the top of the panel (System, Light, Dark).
 
