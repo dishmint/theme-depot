@@ -20,7 +20,7 @@ mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 cp xcode/future-earth/*.xcworkspacecolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
 ```
 
-Or import through the UI: **Settings** > **Appearance** > **Theme** > **Choose…** > **Import…** and select each `.xcworkspacecolortheme` file.
+Importing through the UI (**Settings** > **Appearance** > **Theme** > **Choose…** > **Import…**) should also work but hasn't been tested with `.xcworkspacecolortheme` files.
 
 ### Activate
 
