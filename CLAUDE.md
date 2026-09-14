@@ -24,7 +24,17 @@ XML plist files (`.xccolortheme`) following Apple's `DVTFontAndColorTheme` schem
 
 Light and dark variants follow the palette's design principles: dark mode uses color distinctions, light mode uses font weight distinctions (bold for functions, semibold for types) with minimal color.
 
-Xcode 27 variants (`future-earth-xcode27-dark` / `-light`) live alongside the base files. They keep every base value and add the keys Xcode 27's Appearance panel reads on import: `DVTDebuggerInstructionPointerColor`, `DVTFontSizeModifier`, `DVTMarkupTextFont`, and `xcode.syntax.markup.aside.kind` (color and font). Xcode 27 imports them via **Settings > Appearance > Theme > Choose… > Classic Presets > Import…** rather than the `FontAndColorThemes` directory. When changing a base color, apply the same change to the Xcode 27 variant.
+#### Xcode 27 workspace themes
+
+JSON files (`.xcworkspacecolortheme`) exported by Xcode 27's **Settings > Appearance** panel. Each has `fileVersion` and a `recipe`:
+- `colorScheme` — `"light"` or `"dark"`
+- `background.customColor` — editor and workspace background
+- `palette.primary` / `palette.secondary` — the Foreground and Background palette swatches every derived color is generated from
+- `palette.colorOverrides` — per-token colors locked against the palette. Keys mirror the Appearance rows: `plainText`, `comment`, `commentEmphasized`, `markdown`, `markdownEmphasized`, `keyword`, `keyword.attribute`, `string`, `string.regex`, `number`, `number.character`, `link`, `preprocessor`, `preprocessor.macro`, `preprocessor.macroSystem`, `typeDeclaration`, `memberDeclaration`, `projectType.class`, `projectType.type`, `projectMember.function`, `projectMember.constant`, `projectMember.variable`, `otherType.class`, `otherType.type`, `otherMember.function`, `otherMember.constant`, `otherMember.variable`, `selectedTextBackgroundColor`, `insertionPointColor`, `currentLineHighlight`, `invisibles`, `diffAddition`, `diffDeletion`, `debugger`
+
+Colors are OKLCH in the P3 gamut: `{"lightness": {"exact": L}, "chroma": {"exact": C}, "hue": {"radians": h}, "opacity": 1, "gamut": "P3"}`. Convert from hex via sRGB → OKLab → OKLCH. Fonts are not part of the recipe; Xcode 27 stores them separately.
+
+The `.xcworkspacecolortheme` and `.xccolortheme` files carry the same palette. When changing a color, update both formats.
 
 ### Ghostty
 

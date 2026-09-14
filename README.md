@@ -4,7 +4,7 @@ A collection of custom color themes for various applications.
 
 ## Themes
 
-- **Future Earth** — an earthy, warm palette with light and dark variants (Xcode 27 variants included)
+- **Future Earth** — an earthy, warm palette with light and dark variants (Xcode 27 workspace themes included)
 
 ## Installation
 
