@@ -26,8 +26,30 @@
 
 ## Switch Between Light and Dark Variants
 
-Helix has no automatic light/dark switching. Copy both variants into
-`~/.config/helix/themes/` and swap with `:theme` as needed:
+Copy both variants into `~/.config/helix/themes/` first.
+
+### Automatic (unreleased Helix)
+
+> Requires a Helix build from `master`. Released versions up to 25.07.1 do
+> not support this; use manual switching below.
+
+Replace the `theme = "..."` line in `~/.config/helix/config.toml` with:
+
+```toml
+[theme]
+dark = "future-earth-dark"
+light = "future-earth-light"
+# Optional. Used if the terminal doesn't report a preference.
+# Defaults to the `dark` theme if not set.
+# fallback = "future-earth-dark"
+```
+
+Helix reads the light/dark mode from the terminal, so the terminal must
+support [mode 2031 dark/light detection](https://github.com/contour-terminal/contour/blob/master/docs/vt-extensions/color-palette-update-notifications.md).
+
+### Manual
+
+Swap variants with `:theme`:
 
 ```
 :theme future-earth-light
