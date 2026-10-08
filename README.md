@@ -5,6 +5,7 @@ A collection of custom color themes for various applications.
 ## Themes
 
 - **Future Earth** — an earthy, warm palette with light and dark variants (Xcode 27 workspace themes included)
+  - Supported apps: Ghostty, Helix, Xcode (including Xcode 27 workspace themes)
 
 ## Installation
 
